@@ -39,7 +39,7 @@ export const Trilhas = () => (
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam in voluptatum dignissimos.
                 </p>
 
-                <Link to="/cursos/ferramentas-ageis" className="mx-auto">
+                <Link to="/cursos/ferramentasageis" className="mx-auto">
                         <Botao prop="Iniciar" />
                 </Link>
             </div>
