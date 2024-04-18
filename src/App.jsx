@@ -22,7 +22,8 @@ function App() {
           <Route path='/' element={<Inicio />}></Route>
           <Route path='/trilhas' element={<Trilhas />}></Route>
           <Route path="/cursos/:categoria" element={<Cursos/>} />
-          <Route path="/cursos/:categoria/:titulo" element={<Aulas />} />
+          <Route path="/cursos/:categoria/:curso" element={<Aulas />} />
+          <Route path="/cursos/:categoria/:curso/aula/:id" element={<Aulas />} />
 
           
         </Routes>

@@ -22,10 +22,10 @@ export const Cursos = () => {
             <h1 className="text-4xl font-semibold text-center mt-8 mb-12">Cursos de {categoria}</h1>
             <div className='max-w-[320px] grid grid-cols-1 gap-y-8 mx-auto'>
                 {cursos.map(item => (
-                    <Link to={`/cursos/${categoria}/${item.titulo}`} key={item.titulo}>
+                    <Link to={`/cursos/${categoria}/${item.curso}`} key={item.titulo}>
                     <div className='sombra flex items-center py-2 px-4'>
                       <img src={item.imagem} alt={item.titulo} className='w-24' />
-                      <h2 className='font-bold w-full text-center'>{item.titulo}</h2>
+                      <h2 className='font-bold w-full text-center'>{item.curso}</h2>
                     </div>
                   </Link>
                 ))}

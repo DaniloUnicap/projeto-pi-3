@@ -1,18 +1,20 @@
 export const cursosFront = [
-    {
+    {   
+        id: 1,
+        curso: "HTML5 e CSS3",
         imagem: "https://alunos.b7web.com.br/media/courses/logo/html5-e-css3.jpg",
-        titulo: "HTML5 e CSS3",
         modulos: [
             {
-                tituloModulo: "Introdução",
+                tituloModulo: "Módulo 1: Introdução",
                 aulas: [
                     {
-                        tituloAula: "Testando um negócio aqui.exe",
-                        url: "https://www.youtube.com/embed/QkMbqL8QD9w?si=sBJ9nBd8h1R27frp"
+                        id: 1,
+                        tituloAula: "Aula HTML e CSS 1",
+                        url: "https://www.youtube.com/embed/Ejkb_YpuHWs?si=928x1YeCYPMobNt1"
                     },
                     {
-                        tituloAula: "teste 2.exe",
-                        url: "https://www.youtube.com/embed/x3bxVOGsdL4?si=xdSv_RfbFGldHKnA"
+                        tituloAula: "Aula HTML e CSS 2",
+                        url: "https://www.youtube.com/embed/jgQjeqGRdgA?si=_jGtP8HmSmxrItJN"
                     }
                 ]
             }
@@ -20,19 +22,22 @@ export const cursosFront = [
     },
 
     {
+        id: 2,
+        curso: "Javascript",
         imagem: "https://alunos.b7web.com.br/media/courses/logo/javascript.jpg",
-        titulo: "JavinhaScriptinho",
         modulos: [
             {
-                tituloModulo: "Introdução",
+                tituloModulo: "Módulo 1: introdução",
                 aulas: [
                     {
-                        tituloAula: "Testando um negócio aqui.exe",
-                        url: "https://www.youtube.com/embed/QkMbqL8QD9w?si=sBJ9nBd8h1R27frp"
+                        id: 2,
+                        tituloAula: "Aula Javascript 1",
+                        url: "https://www.youtube.com/embed/vEwPnjqWQ-g?si=ij5SuQ77kjY7tbb0"
                     },
                     {
-                        tituloAula: "teste 2.exe",
-                        url: "https://www.youtube.com/embed/x3bxVOGsdL4?si=xdSv_RfbFGldHKnA"
+                        id: 3,
+                        tituloAula: "Aula Javascript 2",
+                        url: "https://www.youtube.com/embed/sXjEvPbC9B8?si=kiscXjuYKZZSR_p2"
                     }
                 ]
             }
@@ -42,20 +47,22 @@ export const cursosFront = [
 ]
 
 export const cursosBack = [
-    {
+    {   
+        id: 3,
+        curso: "PHP",
         imagem: "https://alunos.b7web.com.br/media/courses/logo/php.jpg",
-        titulo: "PHP",
         modulos: [
             {
                 tituloModulo: "Introdução",
                 aulas: [
                     {
+                        id: 1,
                         tituloAula: "Testando um negócio aqui.exe",
-                        url: "https://www.youtube.com/embed/QkMbqL8QD9w?si=sBJ9nBd8h1R27frp"
+                        url: "https://www.youtube.com/embed/TfsO0BGvGn0?si=HMs9kYdsrYxDP3gI"
                     },
                     {
                         tituloAula: "teste 2.exe",
-                        url: "https://www.youtube.com/embed/x3bxVOGsdL4?si=xdSv_RfbFGldHKnA"
+                        url: "https://www.youtube.com/embed/dLHlHTsFqvk?si=5NFPMvfRWwmMYY32"
                     }
                 ]
             }
