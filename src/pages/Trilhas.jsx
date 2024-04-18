@@ -11,7 +11,7 @@ export const Trilhas = () => (
         <h1 className="text-4xl font-semibold text-center mt-8 mb-12">Trilhas de conhecimento</h1>
 
         <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-6">
-            <div className="min-w-[280px] max-w-[460px] mx-auto p-6 sombra flex flex-col gap-6 rounded-lg">
+            <div className="min-w-[280px] max-w-[400px] mx-auto p-6 sombra flex flex-col gap-6 rounded-lg">
                 <img src={imgFront} alt="" />
                 <p className="text-center">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam in voluptatum dignissimos.
@@ -21,7 +21,7 @@ export const Trilhas = () => (
                         <Botao prop="Iniciar" />
                 </Link>
             </div>
-            <div className="min-w-[280px] max-w-[460px] mx-auto p-6 sombra flex flex-col gap-6 rounded-lg">
+            <div className="min-w-[280px] max-w-[400px] mx-auto p-6 sombra flex flex-col gap-6 rounded-lg">
                 <img src={imgBack} alt="" />
                 <p className="text-center">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam in voluptatum dignissimos.
@@ -33,7 +33,7 @@ export const Trilhas = () => (
 
 
             </div>
-            <div className="min-w-[280px] max-w-[460px] mx-auto p-6 sombra flex flex-col gap-6 rounded-lg">
+            <div className="min-w-[280px] max-w-[400px] mx-auto p-6 sombra flex flex-col gap-6 rounded-lg">
                 <img src={imgFerramentas} alt="" />
                 <p className="text-center">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam in voluptatum dignissimos.
@@ -43,7 +43,7 @@ export const Trilhas = () => (
                         <Botao prop="Iniciar" />
                 </Link>
             </div>
-            <div className="min-w-[280px] max-w-[460px] mx-auto p-6 sombra flex flex-col gap-6 rounded-lg">
+            <div className="min-w-[280px] max-w-[400px] mx-auto p-6 sombra flex flex-col gap-6 rounded-lg">
                 <img src={imgRedes} alt="" />
                 <p className="text-center">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam in voluptatum dignissimos.

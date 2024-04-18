@@ -17,6 +17,21 @@ export const cursosFront = [
                         url: "https://www.youtube.com/embed/jgQjeqGRdgA?si=_jGtP8HmSmxrItJN"
                     }
                 ]
+            },
+
+            {
+                tituloModulo: "Módulo 2: Mão na massa",
+                aulas: [
+                    {
+                        id: 2,
+                        tituloAula: "Aula HTML de teste",
+                        url: "https://www.youtube.com/embed/Ejkb_YpuHWs?si=928x1YeCYPMobNt1"
+                    },
+                    {
+                        tituloAula: "Aula HTML de teste 2",
+                        url: "https://www.youtube.com/embed/jgQjeqGRdgA?si=_jGtP8HmSmxrItJN"
+                    }
+                ]
             }
         ]
     },
@@ -53,7 +68,7 @@ export const cursosBack = [
         imagem: "https://alunos.b7web.com.br/media/courses/logo/php.jpg",
         modulos: [
             {
-                tituloModulo: "Introdução",
+                tituloModulo: "Módulo 1: Introdução",
                 aulas: [
                     {
                         id: 1,
