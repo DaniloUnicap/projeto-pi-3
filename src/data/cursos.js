@@ -9,11 +9,12 @@ export const cursosFront = [
                 aulas: [
                     {
                         id: 1,
-                        tituloAula: "Aula HTML e CSS 1",
+                        tituloAula: "Começa aqui o novo curso de HTML5 e CSS3",
+                        materialAula: "https://portal.unicap.br/documents/475032/564107/Guia+do+Estudante+EaD+%282023-1%29.pdf/c780f473-ef1f-5d1a-0ef8-2e0b44b011f7?t=1679595835915&download=true",
                         url: "https://www.youtube.com/embed/Ejkb_YpuHWs?si=928x1YeCYPMobNt1"
                     },
                     {
-                        tituloAula: "Aula HTML e CSS 2",
+                        tituloAula: "O que vamos aprender no módulo 01? ",
                         url: "https://www.youtube.com/embed/jgQjeqGRdgA?si=_jGtP8HmSmxrItJN"
                     }
                 ]
