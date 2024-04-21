@@ -10,7 +10,7 @@ export const cursosFront = [
                     {
                         id: 1,
                         tituloAula: "Começa aqui o novo curso de HTML5 e CSS3",
-                        materialAula: "https://portal.unicap.br/documents/475032/564107/Guia+do+Estudante+EaD+%282023-1%29.pdf/c780f473-ef1f-5d1a-0ef8-2e0b44b011f7?t=1679595835915&download=true",
+                        materialAula: "https://drive.google.com/uc?export=download&id=1H4VfDICI6m5nA0TI9UaNwhTsF7193qxO",
                         url: "https://www.youtube.com/embed/Ejkb_YpuHWs?si=928x1YeCYPMobNt1"
                     },
                     {

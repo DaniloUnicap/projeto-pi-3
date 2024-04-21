@@ -102,7 +102,7 @@ export const Aulas = () => {
 
                             {aulaAtual.materialAula && (
                                 <div>
-                                    <a className='bg-sky-600 py-2 px-4 rounded-md cursor-pointer' href={aulaAtual.materialAula} download>Baixar Material</a>
+                                    <a className='bg-sky-600 py-2 px-4 rounded-md cursor-pointer hover:bg-sky-400 transition-all ease-linea' href={aulaAtual.materialAula} download>Baixar Material</a>
                                 </div>
                             )}
 
@@ -111,9 +111,6 @@ export const Aulas = () => {
                     )}
 
                 </div>
-
-
-
 
             </div>
 
