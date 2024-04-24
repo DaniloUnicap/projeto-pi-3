@@ -58,7 +58,32 @@ export const cursosFront = [
                 ]
             }
         ]
+    },
+
+    {
+        id: 3,
+        curso: "TailwindCss",
+        imagem: "https://alunos.b7web.com.br/media/courses/logo/tailwindcss.jpg",
+        modulos: [
+            {
+                tituloModulo: "Módulo 1: introdução",
+                aulas: [
+                    {
+                        id: 2,
+                        tituloAula: "Aula tailwind 1",
+                        url: "https://www.youtube.com/embed/vEwPnjqWQ-g?si=ij5SuQ77kjY7tbb0"
+                    },
+                    {
+                        id: 3,
+                        tituloAula: "Aula tailwind 2",
+                        url: "https://www.youtube.com/embed/sXjEvPbC9B8?si=kiscXjuYKZZSR_p2"
+                    }
+                ]
+            }
+        ]
     }
+
+
 
 ]
 

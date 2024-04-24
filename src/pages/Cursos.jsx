@@ -20,10 +20,10 @@ export const Cursos = () => {
     return (
         <div>
             <h1 className="text-4xl font-semibold text-center mt-8 mb-12">Cursos de {categoria}</h1>
-            <div className='max-w-[320px] grid grid-cols-1 gap-y-8 mx-auto'>
+            <div className=' grid grid-cols-1 gap-y-8  lg:grid-cols-3'>
                 {cursos.map(item => (
                     <Link to={`/cursos/${categoria}/${item.curso}`} key={item.titulo}>
-                    <div className='sombra flex items-center py-2 px-4'>
+                    <div className='bg-[#242125] w-[260px] mx-auto rounded-lg flex items-center py-2 px-4 transition-transform transform hover:scale-110 xl:w-[320px]'>
                       <img src={item.imagem} alt={item.titulo} className='w-24' />
                       <h2 className='font-bold w-full text-center'>{item.curso}</h2>
                     </div>
