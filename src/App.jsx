@@ -7,6 +7,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import { Cursos } from './pages/Cursos';
 import { Aulas } from './pages/Aulas';
 import { Footer } from './components/Footer';
+// import { bg } from '../src/assets/bg.jpeg'
 
 
 function App() {

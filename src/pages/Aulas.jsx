@@ -49,12 +49,25 @@ export const Aulas = () => {
         setAulaAtual({ url, tituloAula, materialAula });
     };
 
+    const[verModulo, setVerModulo] = useState("Fechar módulos")
+
+    const onToggleModulo = () => {
+        const modulos = document.querySelector('.modulos');
+        modulos.classList.toggle('hidden')
+        setVerModulo(verModulo === "Fechar módulos" ? "Exibir módulos" : "Fechar módulos");
+    }
+
     return (
         <div>
             <h1 className="text-4xl font-semibold text-center mt-8 mb-12">Aulas do curso de {curso}</h1>
+            <div className='flex justify-center'>
+                <button onClick={onToggleModulo} className='text-center cursor-pointer mb-8 bg-sky-600 w-56 px-2 md:px-8 py-2 rounded-lg hover:bg-sky-400 transition-all ease-linear'>{verModulo}</button>
 
-            <div className='flex flex-col-reverse justify-end md:flex-row-reverse md:justify-around'>
-                <div className='flex flex-col  bg-[#161616] p-4 rounded-md '>
+            </div>
+
+            <div className='flex flex-row-reverse gap-4 lg:justify-around'>
+
+                <div className='modulos bg-[#161616] p-4 rounded-md '>
 
                     {cursos.modulos.map(modulo => (
                         <div key={modulo.tituloModulo}>
@@ -89,11 +102,11 @@ export const Aulas = () => {
                     ))}
                 </div>
 
-                <div className='w-full h-[400px] md:w-3/5'>
+                <div className='w-full h-[250px] md:h-[400px] lg:h-[400px] lg:w-3/5'>
 
                     {aulaAtual && (
                         <div>
-                            <iframe title="Aula atual" src={aulaAtual.url} ref={iframeRef} className='w-full h-[400px]'></iframe>
+                            <iframe title="Aula atual" src={aulaAtual.url} ref={iframeRef} className='w-full h-[250px] md:h-[300px] lg:h-[400px]'></iframe>
                             <div className='flex justify-between'>
                                 <h2 className='my-4 text-lg font-bold'>{aulaAtual.tituloAula}</h2>
                                 <button onClick={toggleFullScreen}>[Tela cheia]</button>
