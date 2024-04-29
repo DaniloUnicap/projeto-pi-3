@@ -49,7 +49,7 @@ export const Aulas = () => {
         setAulaAtual({ url, tituloAula, materialAula });
     };
 
-    const[verModulo, setVerModulo] = useState("Fechar módulos")
+    const [verModulo, setVerModulo] = useState("Fechar módulos")
 
     const onToggleModulo = () => {
         const modulos = document.querySelector('.modulos');
@@ -65,9 +65,11 @@ export const Aulas = () => {
 
             </div>
 
+            {/* Módulo, aula, tópico */}
             <div className='flex flex-row-reverse gap-4 lg:justify-around'>
 
-                <div className='modulos bg-[#161616] p-4 rounded-md '>
+                {/* Módulo */}
+                <div className='modulos absolute md:static bg-[#242125] p-4 rounded-md '>
 
                     {cursos.modulos.map(modulo => (
                         <div key={modulo.tituloModulo}>
@@ -89,7 +91,6 @@ export const Aulas = () => {
 
                                 </div>
 
-
                                 {modulo.aulas.map(aula => (
                                     <div key={aula.tituloAula} className='overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[9900px]'>
                                         <button onClick={() => handleAulaClick(aula.url, aula.tituloAula, aula.materialAula)} className='w-full text-start'>
@@ -102,8 +103,8 @@ export const Aulas = () => {
                     ))}
                 </div>
 
-                <div className='w-full h-[250px] md:h-[400px] lg:h-[400px] lg:w-3/5'>
-
+                {/* Aula */}
+                <div className='w-full h-[250px] md:h-[400px] lg:w-3/5'>
                     {aulaAtual && (
                         <div>
                             <iframe title="Aula atual" src={aulaAtual.url} ref={iframeRef} className='w-full h-[250px] md:h-[300px] lg:h-[400px]'></iframe>
@@ -118,15 +119,27 @@ export const Aulas = () => {
                                     <a className='bg-sky-600 py-2 px-4 rounded-md cursor-pointer hover:bg-sky-400 transition-all ease-linea' href={aulaAtual.materialAula} download>Baixar Material</a>
                                 </div>
                             )}
-
                         </div>
-
                     )}
 
+                    {/* Tópico */}
+                    <div className='mt-12'>
+                        <h2 className='mb-6 text-lg font-bold'>Tópicos da aula</h2>
+
+                        <div className='bg-[#242125] p-2 flex items-center gap-8 cursor-pointer mb-6 rounded-md'>
+                            <div className='bg-gray-400 h-16 w-16 rounded-full'>
+                            </div>
+                            <h3>Título do tópico / Dúvida sobre a aula</h3>
+                        </div>
+                        <div className='bg-[#242125] p-2 flex items-center gap-8 cursor-pointer mb-6 rounded-md'>
+                            <div className='bg-red-400 h-16 w-16 rounded-full'>
+                            </div>
+                            <h3>Título do tópico / Dúvida sobre a aula</h3>
+                        </div>
+                    </div>
+
                 </div>
-
             </div>
-
 
         </div>
     );
