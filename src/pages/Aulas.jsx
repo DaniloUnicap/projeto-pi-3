@@ -60,7 +60,7 @@ export const Aulas = () => {
     return (
         <div>
             <h1 className="text-4xl font-semibold text-center mt-8 mb-12">Aulas do curso de {curso}</h1>
-            <div className='flex justify-center'>
+            <div className='flex justify-center lg:hidden'>
                 <button onClick={onToggleModulo} className='text-center cursor-pointer mb-8 bg-sky-600 w-56 px-2 md:px-8 py-2 rounded-lg hover:bg-sky-400 transition-all ease-linear'>{verModulo}</button>
 
             </div>
@@ -104,7 +104,7 @@ export const Aulas = () => {
                 </div>
 
                 {/* Aula */}
-                <div className='w-full h-[250px] md:h-[400px] lg:w-3/5'>
+                <div className='w-full h-[600px] lg:w-3/5'>
                     {aulaAtual && (
                         <div>
                             <iframe title="Aula atual" src={aulaAtual.url} ref={iframeRef} className='w-full h-[250px] md:h-[300px] lg:h-[400px]'></iframe>

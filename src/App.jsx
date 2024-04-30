@@ -13,10 +13,10 @@ import { Footer } from './components/Footer';
 function App() {
 
   return (
-    <div className='text-white'>
+    <div className='text-white bg-[#1C1A1D] font-[Poppins]'>
       <Nav />
 
-      <main>
+      <main className='px-4 md:px-16 max-w-[1440px] mx-auto'>
 
         <Routes>
           <Route path='/' element={<Inicio />}></Route>

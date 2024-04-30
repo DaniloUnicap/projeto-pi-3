@@ -20,7 +20,7 @@ export const Nav = () => {
 
 
   return (
-    <nav className='flex z-10 justify-between mx-auto items-center py-6'>
+    <nav className='flex z-10 justify-between mx-auto items-center py-6 px-4 md:px-16 max-w-[1440px]'>
       <p className='text-3xl font-bold'>LOGO</p>
 
       <div className={`absolute bg-[#242125] lg:bg-[#1C1A1D] min-h-[45vh] left-0 z-10 ${isMenuOpen ? 'top-[10%]' : 'top-[-100%]'} w-full flex items-center px-4 lg:static lg:items-center lg:min-h-fit lg:w-auto duration-500 gap-12 flex-col lg:flex-row justify-center`}>
