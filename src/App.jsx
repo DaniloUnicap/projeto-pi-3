@@ -17,7 +17,7 @@ function App() {
     <div className='text-white bg-[#1C1A1D] font-[Poppins]'>
       <Nav />
 
-      <main className='px-4 md:px-16 max-w-[1440px] mx-auto'>
+      <main className='max-w-[1920px] mx-auto'>
 
         <Routes>
           <Route path='/' element={<Inicio />}></Route>

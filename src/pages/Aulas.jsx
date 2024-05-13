@@ -58,7 +58,7 @@ export const Aulas = () => {
     }
 
     return (
-        <div>
+        <div className='px-4 md:px-16 '>
             <h1 className="text-4xl font-semibold text-center mt-8 mb-12">Aulas do curso de {curso}</h1>
             <div className='flex justify-center lg:hidden'>
                 <button onClick={onToggleModulo} className='text-center cursor-pointer mb-8 bg-sky-600 w-56 px-2 md:px-8 py-2 rounded-lg hover:bg-sky-400 transition-all ease-linear'>{verModulo}</button>
@@ -123,7 +123,7 @@ export const Aulas = () => {
                     )}
 
                     {/* Tópico */}
-                    <div className='mt-12'>
+                    {/* <div className='mt-12'>
                         <h2 className='mb-6 text-lg font-bold'>Tópicos da aula</h2>
 
                         <div className='bg-[#242125] p-2 flex items-center gap-8 cursor-pointer mb-6 rounded-md'>
@@ -136,7 +136,7 @@ export const Aulas = () => {
                             </div>
                             <h3>Título do tópico / Dúvida sobre a aula</h3>
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>

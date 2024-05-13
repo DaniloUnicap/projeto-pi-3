@@ -7,7 +7,7 @@ import "../App.css"
 import { Link } from "react-router-dom"
 
 export const Trilhas = () => (
-    <div>
+    <div className="px-4 md:px-16 ">
         <h1 className="text-4xl font-semibold text-center mt-8 mb-12">Trilhas de conhecimento</h1>
 
         <div className="grid grid-cols-1 gap-y-16 gap-0 md:grid-cols-2 md:gap-x-24">

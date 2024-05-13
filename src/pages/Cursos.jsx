@@ -18,7 +18,7 @@ export const Cursos = () => {
     }
 
     return (
-        <div>
+        <div className='px-4 md:px-16 '>
             <h1 className="text-4xl font-semibold text-center mt-8 mb-12">Cursos de {categoria}</h1>
             <div className=' grid grid-cols-1 gap-y-8  lg:grid-cols-3'>
                 {cursos.map(item => (
