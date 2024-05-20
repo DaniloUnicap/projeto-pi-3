@@ -18,7 +18,7 @@ function App() {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className={` font-[Poppins] ${theme === "ligth" ? "bg-[#f4f4f5] text-black" : "text-white"}`}>
+    <div className={` font-[Poppins] ${theme === "light" ? "bg-[#f4f4f5] text-black" : "text-white"}`}>
       <Nav />
 
       <main className='max-w-[1920px] mx-auto'>

@@ -72,14 +72,14 @@ export const Aulas = () => {
             <div className='flex flex-row-reverse gap-4 lg:justify-around'>
 
                 {/* Módulo */}
-                <div className={`${theme === "ligth" ? "bg-gray-300 text-black" : "bg-[#242125] text-white"} modulos absolute md:static  p-4 rounded-md`}>
+                <div className={`${theme === "light" ? "bg-gray-300 text-black" : "bg-[#242125] text-white"} modulos absolute md:static  p-4 rounded-md`}>
 
                     {cursos.modulos.map(modulo => (
                         <div key={modulo.tituloModulo}>
                             <div className='relative overflow-hidden '>
 
                                 <h2
-                                    className={`${theme === "ligth" ? "bg-gray-400 text-black" : "bg-[#1C1A1D] text-white"} text-lg font-bold mt-4 mb-2  py-4 pl-4 pr-12`}>
+                                    className={`${theme === "light" ? "bg-gray-400 text-black" : "bg-[#1C1A1D] text-white"} text-lg font-bold mt-4 mb-2  py-4 pl-4 pr-12`}>
                                     {modulo.tituloModulo}
                                 </h2>
 

@@ -16,7 +16,7 @@ export const Trilhas = () => {
 
         <div className="grid grid-cols-1 gap-y-16 gap-0 md:grid-cols-2 md:gap-x-24">
             <div className="flex justify-center md:justify-end">
-                <div className={` ${theme === "ligth" ? "bg-gray-300 text-black" : "bg-[#242125] text-white"} min-w-[280px] max-w-[400px] p-6 flex flex-col gap-6 rounded-lg`}>
+                <div className={` ${theme === "light" ? "bg-gray-300 text-black" : "bg-[#242125] text-white"} min-w-[280px] max-w-[400px] p-6 flex flex-col gap-6 rounded-lg`}>
                     <img src={imgFront} alt="" />
                     <p className="text-center">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam in voluptatum dignissimos.
@@ -29,7 +29,7 @@ export const Trilhas = () => {
             </div>
 
             <div className="flex justify-center md:justify-start">
-                <div className={` ${theme === "ligth" ? "bg-gray-300 text-black" : "bg-[#242125] text-white"} min-w-[280px] max-w-[400px] p-6 flex flex-col gap-6 rounded-lg`}>
+                <div className={` ${theme === "light" ? "bg-gray-300 text-black" : "bg-[#242125] text-white"} min-w-[280px] max-w-[400px] p-6 flex flex-col gap-6 rounded-lg`}>
                     <img src={imgBack} alt="" />
                     <p className="text-center">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam in voluptatum dignissimos.
@@ -43,7 +43,7 @@ export const Trilhas = () => {
             </div>
 
             <div className="flex justify-center md:justify-end">
-                <div className={` ${theme === "ligth" ? "bg-gray-300 text-black" : "bg-[#242125] text-white"} min-w-[280px] max-w-[400px] p-6 flex flex-col gap-6 rounded-lg`}>
+                <div className={` ${theme === "light" ? "bg-gray-300 text-black" : "bg-[#242125] text-white"} min-w-[280px] max-w-[400px] p-6 flex flex-col gap-6 rounded-lg`}>
                     <img src={imgFerramentas} alt="" />
                     <p className="text-center">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam in voluptatum dignissimos.
@@ -56,7 +56,7 @@ export const Trilhas = () => {
             </div>
 
             <div className="flex justify-center md:justify-start">
-                <div className={` ${theme === "ligth" ? "bg-gray-300 text-black" : "bg-[#242125] text-white"} min-w-[280px] max-w-[400px] p-6 flex flex-col gap-6 rounded-lg`}>
+                <div className={` ${theme === "light" ? "bg-gray-300 text-black" : "bg-[#242125] text-white"} min-w-[280px] max-w-[400px] p-6 flex flex-col gap-6 rounded-lg`}>
                     <img src={imgRedes} alt="" />
                     <p className="text-center">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam in voluptatum dignissimos.
