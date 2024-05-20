@@ -1,8 +1,11 @@
 import React, { useState, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import { cursosFront, cursosBack, cursosFerramentasAgeis, cursosRedes } from '../data/cursos';
+import { useContext } from "react"
+import { ThemeContext } from "../context/ThemeContext"
 
 export const Aulas = () => {
+    const { theme } = useContext(ThemeContext);
     const { curso } = useParams();
     const [aulaAtual, setAulaAtual] = useState(null);
     const iframeRef = useRef(null);
@@ -69,14 +72,14 @@ export const Aulas = () => {
             <div className='flex flex-row-reverse gap-4 lg:justify-around'>
 
                 {/* Módulo */}
-                <div className='modulos absolute md:static bg-[#242125] p-4 rounded-md '>
+                <div className={`${theme === "ligth" ? "bg-gray-300 text-black" : "bg-[#242125] text-white"} modulos absolute md:static  p-4 rounded-md`}>
 
                     {cursos.modulos.map(modulo => (
                         <div key={modulo.tituloModulo}>
                             <div className='relative overflow-hidden '>
 
                                 <h2
-                                    className='text-lg font-bold mt-4 mb-2 bg-[#1C1A1D] py-4 pl-4 pr-12'>
+                                    className={`${theme === "ligth" ? "bg-gray-400 text-black" : "bg-[#1C1A1D] text-white"} text-lg font-bold mt-4 mb-2  py-4 pl-4 pr-12`}>
                                     {modulo.tituloModulo}
                                 </h2>
 
