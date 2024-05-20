@@ -1,6 +1,16 @@
+import { Swiper, SwiperSlide } from 'swiper/react'
+
 export const Colabore = () => {
+
+    const data = [
+        {id: 1, imagem: 'https://sujeitoprogramador.com/wp-content/uploads/2022/08/fullstack-blog.png'},
+        {id: 2, imagem: 'https://sujeitoprogramador.com/wp-content/uploads/2022/08/home.png'},
+        {id: 3, imagem: 'https://sujeitoprogramador.com/wp-content/uploads/2022/03/Frame-321.png'},
+        {id: 4, imagem: 'https://sujeitoprogramador.com/wp-content/uploads/2022/01/thumb-1.png'}
+    ]
+
     return (
-        <div>
+        <div className='px-4 md:px-16'>
             <h1 className="text-4xl font-semibold text-center mt-8 mb-12">Colabore com o nosso projeto</h1>
 
             <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -13,15 +23,26 @@ export const Colabore = () => {
                 </div>
 
                 <div className="w-max-[400px] h-[400px] bg-sky-600 flex items-center justify-center">
-                        <p>Área do gerador de QRCode</p>
+                    <p>Área do gerador de QRCode</p>
                 </div>
             </section>
 
             <section>
                 <h2 className="text-2xl font-semibold text-center my-16 ">Algum título aqui</h2>
 
-                <div className="w-max-[400px] h-[400px] bg-sky-600 flex items-center justify-center">
-                    <p>Área do carrossel de imagens</p>
+                <div className=''>
+                    <Swiper
+                        slidesPerView={1}
+                        pagination={{clickable: true}}
+                        navigation={{clickable: true}}
+                        autoplay={{ delay: 7000 }}
+                    >
+                        {data.map((item) => (
+                            <SwiperSlide key={item.id}>
+                                <img src={item.imagem} alt="Slider" className='lg:h-[700px] lg:w-full' />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
             </section>
 
