@@ -8,6 +8,7 @@ import { Aulas } from './pages/Aulas';
 import { Footer } from './components/Footer';
 import { useContext } from 'react';
 import { ThemeContext } from './context/ThemeContext';
+import { Colabore } from './pages/Colabore';
 // import { NotFound } from './components/NotFound';
 //teste
 
@@ -28,7 +29,10 @@ function App() {
           <Route path="/cursos/:categoria" element={<Cursos />} />
           <Route path="/cursos/:categoria/:curso" element={<Aulas />} />
           <Route path="/cursos/:categoria/:curso/aula/:id" element={<Aulas />} />
+          <Route path='colabore' element={<Colabore/>}></Route>
+
           {/* <Route path='*' element={<NotFound />} /> */}
+
         </Routes>
 
       </main>
