@@ -9,6 +9,7 @@ import { Footer } from './components/Footer';
 import { useContext } from 'react';
 import { ThemeContext } from './context/ThemeContext';
 // import { NotFound } from './components/NotFound';
+//teste
 
 
 function App() {
