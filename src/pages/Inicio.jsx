@@ -11,7 +11,7 @@ export const Inicio = () => {
         <div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:mt-24 px-4 md:px-16 ">
                 <div className="flex flex-col">
-                    <h1 className={`text-5xl italic text-center mt-8 md:mx-auto md:text-7xl ${theme === "ligth" ? "text-black" : "text-white"}`}><span className="font-bold  text-sky-600">Bird</span>Tech</h1>
+                    <h1 className={`text-5xl italic text-center mt-8 md:mx-auto md:text-7xl ${theme === "light" ? "text-black" : "text-white"}`}><span className="font-bold  text-sky-600">Bird</span>Tech</h1>
 
                     <p className="my-12 text-center px-8">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam debitis voluptas in blanditiis veritatis explicabo, dignissimos nostrum officia, dicta aspernatur perspiciatis maxime provident! Ipsa excepturi exercitationem provident labore ut officiis.
