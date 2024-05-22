@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
+import PixQRCodeGenerator from '../components/PixQRCodeGenerator'
 
 export const Colabore = () => {
 
@@ -22,8 +23,10 @@ export const Colabore = () => {
                     </p>
                 </div>
 
-                <div className="w-max-[400px] h-[400px] bg-sky-600 flex items-center justify-center">
-                    <p>Área do gerador de QRCode</p>
+                <div className="w-max-[400px] h-[400px]  mx-auto">
+                    <PixQRCodeGenerator>
+
+                    </PixQRCodeGenerator>
                 </div>
             </section>
 
