@@ -9,8 +9,8 @@ import { Footer } from './components/Footer';
 import { useContext } from 'react';
 import { ThemeContext } from './context/ThemeContext';
 import { Colabore } from './pages/Colabore';
+import { Sugestoes } from './pages/Sugestoes';
 // import { NotFound } from './components/NotFound';
-//teste
 
 
 function App() {
@@ -30,6 +30,7 @@ function App() {
           <Route path="/cursos/:categoria/:curso" element={<Aulas />} />
           <Route path="/cursos/:categoria/:curso/aula/:id" element={<Aulas />} />
           <Route path='colabore' element={<Colabore/>}></Route>
+          <Route path='/sugestoes' element={<Sugestoes/>}></Route>
 
           {/* <Route path='*' element={<NotFound />} /> */}
 
