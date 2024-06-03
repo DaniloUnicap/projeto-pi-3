@@ -42,7 +42,7 @@ export const Colabore = () => {
                     >
                         {data.map((item) => (
                             <SwiperSlide key={item.id}>
-                                <img src={item.imagem} alt="Slider" className='lg:h-[700px] lg:w-full' />
+                                <img src={item.imagem} alt="Slider" className='lg:h-[400px] lg:w-full' />
                             </SwiperSlide>
                         ))}
                     </Swiper>
