@@ -10,7 +10,6 @@ import { useContext } from 'react';
 import { ThemeContext } from './context/ThemeContext';
 import { Colabore } from './pages/Colabore';
 // import { NotFound } from './components/NotFound';
-//teste
 
 
 function App() {
