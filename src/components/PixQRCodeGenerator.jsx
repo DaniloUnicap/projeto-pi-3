@@ -70,7 +70,7 @@ const PixQRCodeGenerator = () => {
 
   return (
     <div className='flex flex-col gap-2'>
-      <h1 className='text-center text-lg font-bold'>Colabore aqui</h1>
+      <h1 className='text-center text-lg font-bold'>Faça sua colaboração aqui</h1>
       <input
         type="number"
         placeholder="Valor do PIX"
@@ -81,7 +81,7 @@ const PixQRCodeGenerator = () => {
       <button onClick={handleGenerateQRCode} className='bg-sky-600 rounded-md py-1'>Gerar QR Code</button>
       {pixCode && (
         <div>
-          <QRCode value={pixCode} size={256} />
+          <QRCode value={pixCode} size={256} className='mx-auto mt-4' />
         </div>
       )}
     </div>
