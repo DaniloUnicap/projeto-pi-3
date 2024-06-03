@@ -1,4 +1,5 @@
 import hero from '../assets/sugestões/feedback.png'
+import { Botao } from '../components/Botao'
 
 export const Sugestoes = () => {
     return (
@@ -14,6 +15,30 @@ export const Sugestoes = () => {
                 <div className=''>
                     <img src={hero} alt="" className='mx-auto' />
                 </div>
+            </section>
+
+            <section className='mt-28 font-bold text-lg'>
+                <h2 className='text-center mb-6'>Em qual ponto você acha que devemos melhorar?</h2>
+                <div className='flex flex-col gap-6'>
+                    <input
+                        type="text"
+                        name=""
+                        id=""
+                        placeholder='Título da sugestão'
+                        className='bg-[#242125] rounded-md p-2 outline-none'
+                    />
+                    <textarea
+                        name=""
+                        id=""
+                        placeholder='Faça sua sugestão aqui'
+                        className='bg-[#242125] rounded-md p-2 outline-none'>
+
+                    </textarea>
+                    <div className='mx-auto'>
+                        <Botao prop={"Enviar sugestão"}/>
+                    </div>
+                </div>
+
             </section>
 
         </div>
