@@ -1,18 +1,17 @@
 import React, { useState, useRef, useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { ThemeContext } from "../context/ThemeContext";
-import { Link } from 'react-router-dom';
 
 const urls = {
-    "frontend": "https://parseapi.back4app.com/parse/classes/frontEnd",
-    "backend": "https://parseapi.back4app.com/parse/classes/backEnd",
-    "ferramentasageis": "https://parseapi.back4app.com/parse/classes/ferramentasAgeis",
-    "redes": "https://parseapi.back4app.com/parse/classes/redes",
+    "frontend": "https://parseapi.back4app.com/parse/classes/Frontend",
+    "backend": "https://parseapi.back4app.com/parse/classes/Backend",
+    "ferramentasageis": "https://parseapi.back4app.com/parse/classes/Ferramentas",
+    "redes": "https://parseapi.back4app.com/parse/classes/Redes",
 };
 
 const headers = {
-    "X-Parse-Application-Id": "51nzUefY7CJCG3qJb5usAf0pxoYkKd38P8nzrLc4",
-    "X-Parse-REST-API-Key": "yykJnk7ZKiPkcRgvVFKi22hy0NRpgzz4X3CoY5In",
+    "X-Parse-Application-Id": "Itmjd2v3Evbo1O46ZjJZGRvPNC22J7a3YnNhWzC3",
+    "X-Parse-REST-API-Key": "6SWgcaGd1K0jJQYnymlP30UfoL4f3aimb3gaO2GS",
 };
 
 const headersJson = {
@@ -82,8 +81,8 @@ export const Aulas = () => {
         }
     };
 
-    const handleAulaClick = (url, tituloAula, materialAula, avModulo) => {
-        setAulaAtual({ url, tituloAula, materialAula, avModulo });
+    const handleAulaClick = (url, tituloAula, materialAula) => {
+        setAulaAtual({ url, tituloAula, materialAula });
     };
 
     const onToggleModulo = () => {
@@ -105,7 +104,7 @@ export const Aulas = () => {
 
             <div className='flex flex-row-reverse gap-4 lg:justify-around'>
                 <div className={`${theme === "ligth" ? "bg-gray-300 text-black" : "bg-[#242125] text-white"} modulos absolute md:static p-4 rounded-md`}>
-                    {cursos.modulos && cursos.modulos.map((modulo, moduloIndex) => (
+                    {cursos.conteudo && cursos.conteudo.map((modulo, moduloIndex) => (
                         <div key={moduloIndex}>
                             {modulo.modulos && modulo.modulos.map((submodulo, submoduloIndex) => (
                                 <div key={submodulo.tituloModulo + submoduloIndex}>
@@ -123,7 +122,7 @@ export const Aulas = () => {
                                         </div>
                                         {submodulo.aulas && submodulo.aulas.map((aula, aulaIndex) => (
                                             <div key={submodulo.tituloModulo + "-" + aula.tituloAula + "-" + aulaIndex} className='overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[9900px]'>
-                                                <button onClick={() => handleAulaClick(aula.url, aula.tituloAula, aula.materialAula, aula.avModulo)} className='w-full text-start'>
+                                                <button onClick={() => handleAulaClick(aula.url, aula.tituloAula, aula.materialAula)} className='w-full text-start'>
                                                     <p className='transition-all duration-300 hover:text-sky-600 p-2'>{aula.tituloAula}</p>
                                                 </button>
                                             </div>
@@ -146,14 +145,6 @@ export const Aulas = () => {
                             {aulaAtual.materialAula && (
                                 <div>
                                     <a className='bg-sky-600 py-2 px-4 rounded-md cursor-pointer hover:bg-sky-400 transition-all ease-linea' href={aulaAtual.materialAula} download>Baixar Material</a>
-                                </div>
-                            )}
-                            {aulaAtual.avModulo && (
-                                <div>
-                                    <Link to="/avaliacao">
-                                        <a className='bg-sky-600 py-2 px-4 rounded-md cursor-pointer hover:bg-sky-400 transition-all ease-linea' href={aulaAtual.avModulo}>Teste de aprendizado</a>
-                                    </Link>
-                                    
                                 </div>
                             )}
                         </div>
