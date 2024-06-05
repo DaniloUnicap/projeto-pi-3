@@ -26,8 +26,31 @@ const questions = [
       options: ["3", "5", "6", "8"],
       answer: "c",
     },
-    
-      
+    {
+      question: "6. Qual tag é usada para definir um parágrafo em HTML?",
+      options: ["<div>", "<span>", "<p>", "<section>"],
+      answer: "c",
+    },
+    {
+      question: "7. Qual tag HTML é usada para destacar texto com importância semântica?",
+      options: ["<b>", "<i>", "<strong>", "<u>"],
+      answer: "c",
+    },
+    {
+      question: "8. Qual tag HTML define um bloco de citação?",
+      options: ["<cite>", "<quote>", "<blockquote>", "<q>"],
+      answer: "c",
+    },
+    {
+      question: "9. Qual tag HTML é usada para criar uma lista ordenada?",
+      options: ["<ul>", "<ol>", "<li>", "<dl>"],
+      answer: "b",
+    },
+    {
+      question: "10. Qual tag HTML5 é usada para definir conteúdo autônomo e relevante em um documento?",
+      options: ["<section>", "<article>", "<header>", "<footer>"],
+      answer: "b",
+    },
   ];
 
 
