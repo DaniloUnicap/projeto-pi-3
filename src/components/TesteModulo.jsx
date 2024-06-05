@@ -56,10 +56,60 @@ const questions = [
 
 
 export const  TesteModulo = () => {
+  const [answers, setAnswers] = useState({});
+  const [score, setScore] = useState(null);
+
+  const handleOptionChange = (questionIndex, optionIndex) => {
+    setAnswers({
+      ...answers,
+      [questionIndex]: optionIndex,
+    });
+  };
+
+  const submitAnswers = () => {
+    let newScore = 0;
+    questions.forEach((q, index) => {
+      if (answers[index] === q.answer) {
+        newScore++;
+      }
+    });
+    setScore(newScore);
+  };
   
 
   return (
     <div className="px-4 md:px-16">
+      {questions.map((q, index) => (
+        <div className="mb-6" key={index}>
+          <h2 className="text-lg font-semibold mb-2">{q.question}</h2>
+          <div className="flex flex-col space-y-2">
+            {q.options.map((option, i) => (
+              <label key={i} className="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name={`q${index}`}
+                  value={String.fromCharCode(97 + i)} // 'a', 'b', 'c', 'd'
+                  checked={answers[index] === String.fromCharCode(97 + i)}
+                  onChange={() => handleOptionChange(index, String.fromCharCode(97 + i))}
+                  className="form-radio"
+                />{' '}
+                <span>{String.fromCharCode(97 + i)}) {option}</span>
+              </label>
+            ))}
+          </div>
+        </div>
+      ))}
+      <button
+        onClick={submitAnswers}
+        className="px-4 py-2 bg-sky-600 text-white rounded-md hover:bg-sky-400 transition-all ease-linear"
+      >
+        Enviar Respostas
+      </button>
+      {score !== null && (
+        <h2 className="mt-4 text-xl font-bold">
+          Você acertou {score} de {questions.length} perguntas.
+        </h2>
+      )}
       
     </div>
   );
