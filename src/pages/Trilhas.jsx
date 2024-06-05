@@ -22,7 +22,7 @@ export const Trilhas = () => {
                             <img src={imgFront} alt="" className="h-[200px] mx-auto" />
                         </div>
                         <p className="text-center">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam in voluptatum dignissimos.
+                        Frontend refere-se à parte visual e interativa de um site ou aplicação, com a qual os usuários interagem de forma direta.
                         </p>
 
                         <Link to="/cursos/frontend" className="mx-auto">
@@ -38,7 +38,7 @@ export const Trilhas = () => {
                             <img src={imgBack} alt="" className="h-[200px] mx-auto" />
                         </div>
                         <p className="text-center">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam in voluptatum dignissimos.
+                        Backend é a parte de um site ou aplicação responsável por gerenciar o banco de dados, a lógica de negócios e a autenticação dos usuários.
                         </p>
 
                         <Link to="/cursos/backend" className="mx-auto">
@@ -55,7 +55,7 @@ export const Trilhas = () => {
                             <img src={imgFerramentas} alt="" className="h-[200px] mx-auto" />
                         </div>
                         <p className="text-center">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam in voluptatum dignissimos.
+                        Ferramentas ágeis são software e práticas que suportam metodologias ágeis de gerenciamento de projetos, como Scrum e Kanban.
                         </p>
 
                         <Link to="/cursos/ferramentasageis" className="mx-auto">
@@ -71,7 +71,7 @@ export const Trilhas = () => {
                             <img src={imgRedes} alt="" className="h-[200px] mx-auto" />
                         </div>
                         <p className="text-center">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam in voluptatum dignissimos.
+                        Redes referem-se ao conjunto de dispositivos conectados que trocam dados entre si, como computadores, servidores e roteadores.
                         </p>
 
                         <Link to="/cursos/redes" className="mx-auto">
