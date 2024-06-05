@@ -3,17 +3,18 @@ import { useParams, Link } from 'react-router-dom';
 import { ThemeContext } from "../context/ThemeContext";
 import "../App.css";
 
-const apiUrls = {
-    frontend: "https://parseapi.back4app.com/parse/classes/frontEnd",
-    backend: "https://parseapi.back4app.com/parse/classes/backEnd",
-    ferramentasageis: "https://parseapi.back4app.com/parse/classes/ferramentasAgeis",
-    redes: "https://parseapi.back4app.com/parse/classes/redes"
+const urls = {
+    "frontend": "https://parseapi.back4app.com/parse/classes/Frontend",
+    "backend": "https://parseapi.back4app.com/parse/classes/Backend",
+    "ferramentasageis": "https://parseapi.back4app.com/parse/classes/Ferramentas",
+    "redes": "https://parseapi.back4app.com/parse/classes/Redes",
 };
 
 const headers = {
-    "X-Parse-Application-Id": "51nzUefY7CJCG3qJb5usAf0pxoYkKd38P8nzrLc4",
-    "X-Parse-REST-API-Key": "yykJnk7ZKiPkcRgvVFKi22hy0NRpgzz4X3CoY5In",
+    "X-Parse-Application-Id": "Itmjd2v3Evbo1O46ZjJZGRvPNC22J7a3YnNhWzC3",
+    "X-Parse-REST-API-Key": "6SWgcaGd1K0jJQYnymlP30UfoL4f3aimb3gaO2GS",
 };
+
 const headersJson = {
     ...headers,
     "Content-Type": "application/json",
@@ -28,7 +29,7 @@ export const Cursos = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(apiUrls[categoria], {
+                const response = await fetch(urls[categoria], {
                     method: 'GET',
                     headers: headersJson
                 });
@@ -55,7 +56,7 @@ export const Cursos = () => {
 
     return (
         <div className='px-4 md:px-16'>
-            <h1 className="text-4xl font-semibold text-center mt-8 mb-12">Cursos de {categoria}</h1>
+            <h1 className="text-4xl font-semibold text-center mt-8 mb-12">Cursos {categoria}</h1>
             <div className='grid grid-cols-1 gap-y-8 lg:grid-cols-3'>
                 {cursos.map(item => (
                     <Link to={`/cursos/${categoria}/${item.tituloCurso}`} key={item.objectId}>
