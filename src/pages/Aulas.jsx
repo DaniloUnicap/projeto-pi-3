@@ -1,6 +1,7 @@
 import React, { useState, useRef, useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { ThemeContext } from "../context/ThemeContext";
+import { Link } from 'react-router-dom';
 
 const urls = {
     "frontend": "https://parseapi.back4app.com/parse/classes/frontEnd",
@@ -81,8 +82,8 @@ export const Aulas = () => {
         }
     };
 
-    const handleAulaClick = (url, tituloAula, materialAula) => {
-        setAulaAtual({ url, tituloAula, materialAula });
+    const handleAulaClick = (url, tituloAula, materialAula, avModulo) => {
+        setAulaAtual({ url, tituloAula, materialAula, avModulo });
     };
 
     const onToggleModulo = () => {
@@ -122,7 +123,7 @@ export const Aulas = () => {
                                         </div>
                                         {submodulo.aulas && submodulo.aulas.map((aula, aulaIndex) => (
                                             <div key={submodulo.tituloModulo + "-" + aula.tituloAula + "-" + aulaIndex} className='overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[9900px]'>
-                                                <button onClick={() => handleAulaClick(aula.url, aula.tituloAula, aula.materialAula)} className='w-full text-start'>
+                                                <button onClick={() => handleAulaClick(aula.url, aula.tituloAula, aula.materialAula, aula.avModulo)} className='w-full text-start'>
                                                     <p className='transition-all duration-300 hover:text-sky-600 p-2'>{aula.tituloAula}</p>
                                                 </button>
                                             </div>
@@ -145,6 +146,14 @@ export const Aulas = () => {
                             {aulaAtual.materialAula && (
                                 <div>
                                     <a className='bg-sky-600 py-2 px-4 rounded-md cursor-pointer hover:bg-sky-400 transition-all ease-linea' href={aulaAtual.materialAula} download>Baixar Material</a>
+                                </div>
+                            )}
+                            {aulaAtual.avModulo && (
+                                <div>
+                                    <Link to="/avaliacao">
+                                        <a className='bg-sky-600 py-2 px-4 rounded-md cursor-pointer hover:bg-sky-400 transition-all ease-linea' href={aulaAtual.avModulo}>Teste de aprendizado</a>
+                                    </Link>
+                                    
                                 </div>
                             )}
                         </div>
