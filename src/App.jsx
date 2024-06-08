@@ -11,7 +11,6 @@ import { ThemeContext } from './context/ThemeContext';
 import { Colabore } from './pages/Colabore';
 import { TesteModulo } from './components/TesteModulo';
 import { Feedback } from './pages/Feedback';
-// import { NotFound } from './components/NotFound';
 
 
 function App() {
@@ -19,10 +18,10 @@ function App() {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className={` font-[Poppins] ${theme === "light" ? "bg-[#f4f4f5] text-black" : "text-white"}`}>
+    <div className={` font-[Poppins] ${theme === "light" ? "bg-[#FFFFFF] text-black" : "text-white"} max-w-[1920px] mx-auto`}>
       <Nav />
 
-      <main className='max-w-[1920px] mx-auto'>
+      <main>
 
         <Routes>
           <Route path='/' element={<Inicio />}></Route>
@@ -33,8 +32,6 @@ function App() {
           <Route path='colabore' element={<Colabore/>}></Route>
           <Route path='/avaliacao' element={<TesteModulo/>}></Route>
           <Route path='/feedback' element={<Feedback/>}></Route>
-
-          {/* <Route path='*' element={<NotFound />} /> */}
 
         </Routes>
 
