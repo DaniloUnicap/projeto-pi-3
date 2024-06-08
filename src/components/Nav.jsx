@@ -49,11 +49,11 @@ export const Nav = () => {
         <div className='flex flex-col lg:flex-row gap-6'>
           {!isAuthenticated ? (
             <>
-              <Link to="entrar"><button className='border-2 border-sky-600 rounded-lg px-4 py-1'>Entrar</button></Link>
+              <Link to="entrar" className='border-2 border-sky-600 rounded-lg px-4 py-1 text-center'>Entrar</Link>
               <Link to="cadastrar"><Botao prop="Cadastre-se" /></Link>
             </>
           ) : (
-            <button onClick={handleLogout} className='border-2 border-red-600 rounded-lg px-4 py-1'>Sair</button>
+            <button onClick={handleLogout} className='border-2 border-red-600 rounded-lg px-4 py-2'>Sair</button>
           )}
         </div>
       </div>

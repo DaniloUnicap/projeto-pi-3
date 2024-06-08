@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { headers } from '../data/headers';
 import { AuthContext } from '../context/AuthContext';
 import { ThemeContext } from '../context/ThemeContext';
+import { Link } from 'react-router-dom';
 
 export const Login = () => {
     const { theme } = useContext(ThemeContext);
@@ -65,6 +66,10 @@ export const Login = () => {
                         onClick={handleLogin}
                         className='bg-sky-600 px-2 md:px-12 py-1 rounded-lg hover:bg-sky-400 transition-all ease-linear'>Entrar
                     </button>
+                    <div className='flex flex-col items-center text-sm'>
+                        <h3 >Não possui conta?</h3>
+                        <Link to="/cadastrar" className='underline'>Cadastre-se</Link>
+                    </div>
                 </div>
             </div>
         </div>
