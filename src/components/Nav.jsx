@@ -31,7 +31,7 @@ export const Nav = () => {
             <Link to="/" onClick={handleCloseMenu}><li className='text-xl font-bold transition-all hover:text-sky-600'>Início</li></Link>
             <Link to="/trilhas" onClick={handleCloseMenu}><li className='text-xl font-bold transition-all hover:text-sky-600'>Trilhas</li></Link>
             <Link to="/colabore" onClick={handleCloseMenu}><li className='text-xl font-bold transition-all hover:text-sky-600'>Colabore</li></Link>
-            <Link to="/sugestoes" onClick={handleCloseMenu}><li className='text-xl font-bold transition-all hover:text-sky-600'>Feedback</li></Link>
+            <Link to="/feedback" onClick={handleCloseMenu}><li className='text-xl font-bold transition-all hover:text-sky-600'>Feedback</li></Link>
             <li>
               <button onClick={toggleTheme} className='text-xl font-bold transition-all hover:text-sky-600 flex items-center'>
                 {theme === "light" ? <FaSun /> : <FaMoon />}

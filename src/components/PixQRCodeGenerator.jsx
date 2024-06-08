@@ -1,6 +1,8 @@
 // src/components/PixQRCodeGenerator.js
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import QRCode from 'qrcode.react';
+import { ThemeContext } from "../context/ThemeContext";
+
 
 // Função para calcular o CRC16-CCITT-FALSE
 const crc16 = (str) => {
@@ -17,6 +19,7 @@ const crc16 = (str) => {
 
 // Função para gerar o payload do QR Code PIX
 const generatePixPayload = ({ pixKey, description, merchantName, merchantCity, txid, amount }) => {
+  
   const pad = (value, length) => value.toString().padStart(length, '0');
 
   const payloadFormatIndicator = '00' + pad(2, 2) + '01';
@@ -53,6 +56,7 @@ const generatePixPayload = ({ pixKey, description, merchantName, merchantCity, t
 const PixQRCodeGenerator = () => {
   const [amount, setAmount] = useState('');
   const [pixCode, setPixCode] = useState('');
+  const { theme } = useContext(ThemeContext);
 
   const handleGenerateQRCode = () => {
     const pixData = {
@@ -76,7 +80,7 @@ const PixQRCodeGenerator = () => {
         placeholder="Valor do PIX"
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
-        className='bg-[#242125] outline-none py-1 px-2 rounded-md'
+        className={`${theme === "light" ? "bg-[#EBEBEF] text-black" : "bg-[#37373C] text-white"} outline-none py-1 px-2 rounded-md`}
       />
       <button onClick={handleGenerateQRCode} className='bg-sky-600 rounded-md py-1'>Gerar QR Code</button>
       {pixCode && (
