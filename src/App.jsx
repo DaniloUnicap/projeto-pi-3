@@ -10,7 +10,7 @@ import { useContext } from 'react';
 import { ThemeContext } from './context/ThemeContext';
 import { Colabore } from './pages/Colabore';
 import { TesteModulo } from './components/TesteModulo';
-import { Sugestoes } from './pages/Sugestoes';
+import { Feedback } from './pages/Feedback';
 // import { NotFound } from './components/NotFound';
 
 
@@ -32,7 +32,7 @@ function App() {
           <Route path="/cursos/:categoria/:curso/aula/:id" element={<Aulas />} />
           <Route path='colabore' element={<Colabore/>}></Route>
           <Route path='/avaliacao' element={<TesteModulo/>}></Route>
-          <Route path='/sugestoes' element={<Sugestoes/>}></Route>
+          <Route path='/feedback' element={<Feedback/>}></Route>
 
           {/* <Route path='*' element={<NotFound />} /> */}
 
