@@ -3,6 +3,7 @@ import { Botao } from '../components/Botao';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
+import logo from '../assets/nav/logo.png';
 
 export const Nav = () => {
 
@@ -23,8 +24,8 @@ export const Nav = () => {
 
 
   return (
-    <nav className='flex z-10 justify-between mx-auto items-center py-6 px-4 md:px-16 max-w-[1920px]'>
-      <p className='text-3xl font-bold'>LOGO</p>
+    <nav className='flex z-10 justify-around mx-auto items-center py-6 px-4 md:px-16 max-w-[1920px]'>
+      <Link to="/"><img src={logo} alt="logo" className='w-20 ' /></Link>
 
       <div className={`absolute  ${theme === "light" ? "bg-gray-200 text-black" : "bg-[#242125]"} lg:bg-transparent  min-h-[45vh] left-0 z-10 ${isMenuOpen ? 'top-[10%]' : 'top-[-100%]'} w-full flex items-center px-4 lg:static lg:items-center lg:min-h-fit lg:w-auto duration-500 gap-12 flex-col lg:flex-row justify-center`}>
         <div className=''>
@@ -32,7 +33,7 @@ export const Nav = () => {
             <Link to="/" onClick={handleCloseMenu}><li className='text-xl font-bold transition-all hover:text-sky-600'>Início</li></Link>
             <Link to="/trilhas" onClick={handleCloseMenu}><li className='text-xl font-bold transition-all hover:text-sky-600'>Trilhas</li></Link>
             <Link to="/colabore" onClick={handleCloseMenu}><li className='text-xl font-bold transition-all hover:text-sky-600'>Colabore</li></Link>
-            <Link to="/sugestoes" onClick={handleCloseMenu}><li className='text-xl font-bold transition-all hover:text-sky-600'>Sugestões</li></Link>
+            <Link to="/feedback" onClick={handleCloseMenu}><li className='text-xl font-bold transition-all hover:text-sky-600'>Feedback</li></Link>
             <li><button onClick={toggleTheme} className='text-xl font-bold transition-all hover:text-sky-600'>Tema: {theme}</button></li>
           </ul>
 
