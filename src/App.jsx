@@ -11,13 +11,16 @@ import { ThemeContext } from './context/ThemeContext';
 import { Colabore } from './pages/Colabore';
 import { TesteModulo } from './components/TesteModulo';
 import { Feedback } from './pages/Feedback';
-
+import { Login } from './pages/Login';
+import { Cadastro } from './pages/Cadastro';
+import { AuthProvider } from './context/AuthContext';
 
 function App() {
 
   const { theme } = useContext(ThemeContext);
 
   return (
+    <AuthProvider>
     <div className={` font-[Poppins] ${theme === "light" ? "bg-[#FFFFFF] text-black" : "text-white"} max-w-[1920px] mx-auto`}>
       <Nav />
 
@@ -32,6 +35,8 @@ function App() {
           <Route path='colabore' element={<Colabore/>}></Route>
           <Route path='/avaliacao' element={<TesteModulo/>}></Route>
           <Route path='/feedback' element={<Feedback/>}></Route>
+          <Route path='/entrar' element={<Login/>}></Route>
+          <Route path='/cadastrar' element={<Cadastro/>}></Route>
 
         </Routes>
 
@@ -40,6 +45,7 @@ function App() {
       <Footer />
 
     </div>
+    </AuthProvider>
   )
 }
 

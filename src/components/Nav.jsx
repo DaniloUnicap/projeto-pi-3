@@ -2,15 +2,16 @@ import { Link } from 'react-router-dom';
 import { Botao } from '../components/Botao';
 import { useState, useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
+import { AuthContext } from '../context/AuthContext';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import logo from '../assets/nav/logo.png';
 
 export const Nav = () => {
-
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const { isAuthenticated, setIsAuthenticated } = useContext(AuthContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const [icone, setIcone] = useState("menu");
+
   const onToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     setIcone(icone === "menu" ? "close" : "menu");
@@ -19,6 +20,11 @@ export const Nav = () => {
   const handleCloseMenu = () => {
     setIsMenuOpen(false);
     setIcone("menu");
+  };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    alert("Você saiu da sua conta.");
   };
 
   return (
@@ -41,8 +47,14 @@ export const Nav = () => {
         </div>
 
         <div className='flex flex-col lg:flex-row gap-6'>
-          <button className='border-2 border-sky-600 rounded-lg px-4 py-1'>Entrar</button>
-          <Botao prop="Cadastre-se" />
+          {!isAuthenticated ? (
+            <>
+              <Link to="entrar"><button className='border-2 border-sky-600 rounded-lg px-4 py-1'>Entrar</button></Link>
+              <Link to="cadastrar"><Botao prop="Cadastre-se" /></Link>
+            </>
+          ) : (
+            <button onClick={handleLogout} className='border-2 border-red-600 rounded-lg px-4 py-1'>Sair</button>
+          )}
         </div>
       </div>
 

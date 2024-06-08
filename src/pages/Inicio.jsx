@@ -1,28 +1,35 @@
-import { Botao } from "../components/Botao"
-import hero from "../assets/início/hero.svg"
-import { useContext } from "react"
-import { ThemeContext } from "../context/ThemeContext"
+import { Botao } from "../components/Botao";
+import hero from "../assets/início/hero.svg";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
+import { AuthContext } from "../context/AuthContext";
+import { Link } from 'react-router-dom';
 
 export const Inicio = () => {
-
-    const {theme} = useContext(ThemeContext);
+    const { theme } = useContext(ThemeContext);
+    const { isAuthenticated } = useContext(AuthContext);
 
     return (
         <div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:mt-24 px-4 md:px-36 ">
                 <div className="flex flex-col">
-                    <h1 className={`text-5xl italic text-center mt-8 md:mx-auto md:text-7xl ${theme === "light" ? "text-black" : "text-white"}`}><span className="font-bold  text-sky-600">Bird</span>Tech</h1>
+                    <h1 className={`text-5xl italic text-center mt-8 md:mx-auto md:text-7xl ${theme === "light" ? "text-black" : "text-white"}`}>
+                        <span className="font-bold text-sky-600">Bird</span>Tech
+                    </h1>
 
                     <p className="my-12 text-justify px-8">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam debitis voluptas in blanditiis veritatis explicabo, dignissimos nostrum officia, dicta aspernatur perspiciatis maxime provident! Ipsa excepturi exercitationem provident labore ut officiis.
                     </p>
 
-                    <div className="flex justify-center md:mx-auto">
-                        <Botao prop="Conecte-se" />
-                    </div>
+                    {!isAuthenticated && (
+                        <div className="flex flex-col justify-center gap-2 md:mx-auto">
+                            <Link to="entrar"><Botao prop="Conecte-se" /></Link>
+                            <Link to="trilhas" className="underline text-center text-sky-600 hover:text-sky-400 transition-all ease-linear">Continuar sem login</Link>
+                        </div>
+                    )}
                 </div>
 
-                <div className="w-96 h-96  mx-auto flex justify-center items-center">
+                <div className="w-96 h-96 mx-auto flex justify-center items-center">
                     <img src={hero} alt="" />
                 </div>
             </div>
@@ -46,7 +53,6 @@ export const Inicio = () => {
                     </div>
                 </div>
             </div>
-
         </div>
-    )
+    );
 }
