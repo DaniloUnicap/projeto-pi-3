@@ -3,6 +3,7 @@ import { Botao } from '../components/Botao';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
+import logo from '../assets/nav/logo.png';
 
 export const Nav = () => {
 
@@ -23,8 +24,8 @@ export const Nav = () => {
 
 
   return (
-    <nav className='flex z-10 justify-between mx-auto items-center py-6 px-4 md:px-16 max-w-[1920px]'>
-      <p className='text-3xl font-bold'>LOGO</p>
+    <nav className='flex z-10 justify-around mx-auto items-center py-6 px-4 md:px-16 max-w-[1920px]'>
+      <Link to="/"><img src={logo} alt="logo" className='w-20 ' /></Link>
 
       <div className={`absolute  ${theme === "light" ? "bg-gray-200 text-black" : "bg-[#242125]"} lg:bg-transparent  min-h-[45vh] left-0 z-10 ${isMenuOpen ? 'top-[10%]' : 'top-[-100%]'} w-full flex items-center px-4 lg:static lg:items-center lg:min-h-fit lg:w-auto duration-500 gap-12 flex-col lg:flex-row justify-center`}>
         <div className=''>
