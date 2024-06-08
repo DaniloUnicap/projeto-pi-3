@@ -1,23 +1,9 @@
 import React, { useState, useRef, useContext, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { ThemeContext } from "../context/ThemeContext";
+import urls from '../data/urls';
+import { headersJson } from '../data/headers';
 
-const urls = {
-    "frontend": "https://parseapi.back4app.com/parse/classes/Frontend",
-    "backend": "https://parseapi.back4app.com/parse/classes/Backend",
-    "ferramentasageis": "https://parseapi.back4app.com/parse/classes/Ferramentas",
-    "redes": "https://parseapi.back4app.com/parse/classes/Redes",
-};
-
-const headers = {
-    "X-Parse-Application-Id": "Itmjd2v3Evbo1O46ZjJZGRvPNC22J7a3YnNhWzC3",
-    "X-Parse-REST-API-Key": "6SWgcaGd1K0jJQYnymlP30UfoL4f3aimb3gaO2GS",
-};
-
-const headersJson = {
-    ...headers,
-    "Content-Type": "application/json",
-};
 
 export const Aulas = () => {
     const { theme } = useContext(ThemeContext);
@@ -81,8 +67,8 @@ export const Aulas = () => {
         }
     };
 
-    const handleAulaClick = (url, tituloAula, materialAula) => {
-        setAulaAtual({ url, tituloAula, materialAula });
+    const handleAulaClick = (url, tituloAula, materialAula, avModulo) => {
+        setAulaAtual({ url, tituloAula, materialAula, avModulo });
     };
 
     const onToggleModulo = () => {
@@ -103,13 +89,13 @@ export const Aulas = () => {
             </div>
 
             <div className='flex flex-row-reverse gap-4 lg:justify-around'>
-                <div className={`${theme === "ligth" ? "bg-gray-300 text-black" : "bg-[#242125] text-white"} modulos absolute md:static p-4 rounded-md`}>
+                <div className={`${theme === "light" ? "bg-[#EBEBEF] text-black" : "bg-[#37373C] text-white"} modulos absolute md:static p-4 rounded-md`}>
                     {cursos.conteudo && cursos.conteudo.map((modulo, moduloIndex) => (
                         <div key={moduloIndex}>
                             {modulo.modulos && modulo.modulos.map((submodulo, submoduloIndex) => (
                                 <div key={submodulo.tituloModulo + submoduloIndex}>
                                     <div className='relative overflow-hidden'>
-                                        <h2 className={`${theme === "ligth" ? "bg-gray-400 text-black" : "bg-[#1C1A1D] text-white"} text-lg font-bold mt-4 mb-2 py-4 pl-4 pr-12`}>
+                                        <h2 className={`${theme === "light" ? "bg-[#FFFFFF] text-black" : "bg-[#27272A] text-white"} text-lg font-bold mt-4 mb-2 py-4 pl-4 pr-12`}>
                                             {submodulo.tituloModulo}
                                         </h2>
                                         <input type="checkbox"
@@ -122,7 +108,7 @@ export const Aulas = () => {
                                         </div>
                                         {submodulo.aulas && submodulo.aulas.map((aula, aulaIndex) => (
                                             <div key={submodulo.tituloModulo + "-" + aula.tituloAula + "-" + aulaIndex} className='overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[9900px]'>
-                                                <button onClick={() => handleAulaClick(aula.url, aula.tituloAula, aula.materialAula)} className='w-full text-start'>
+                                                <button onClick={() => handleAulaClick(aula.url, aula.tituloAula, aula.materialAula, aula.avModulo)} className='w-full text-start'>
                                                     <p className='transition-all duration-300 hover:text-sky-600 p-2'>{aula.tituloAula}</p>
                                                 </button>
                                             </div>
@@ -145,6 +131,14 @@ export const Aulas = () => {
                             {aulaAtual.materialAula && (
                                 <div>
                                     <a className='bg-sky-600 py-2 px-4 rounded-md cursor-pointer hover:bg-sky-400 transition-all ease-linea' href={aulaAtual.materialAula} download>Baixar Material</a>
+                                </div>
+                            )}
+                            {aulaAtual.avModulo && (
+                                <div>
+                                    <Link to="/avaliacao">
+                                        <a className='bg-sky-600 py-2 px-4 rounded-md cursor-pointer hover:bg-sky-400 transition-all ease-linea' href={aulaAtual.avModulo}>Teste de aprendizado</a>
+                                    </Link>
+                                    
                                 </div>
                             )}
                         </div>

@@ -1,27 +1,25 @@
 import { Link } from 'react-router-dom';
 import { Botao } from '../components/Botao';
-import { useState } from 'react';
-import { useContext } from 'react';
+import { useState, useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
+import { FaMoon, FaSun } from 'react-icons/fa';
 import logo from '../assets/nav/logo.png';
 
 export const Nav = () => {
 
-  const {theme, toggleTheme} = useContext(ThemeContext)
+  const { theme, toggleTheme } = useContext(ThemeContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const [icone, setIcone] = useState("menu")
+  const [icone, setIcone] = useState("menu");
   const onToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     setIcone(icone === "menu" ? "close" : "menu");
-
-  }
+  };
 
   const handleCloseMenu = () => {
     setIsMenuOpen(false);
     setIcone("menu");
   };
-
 
   return (
     <nav className='flex z-10 justify-around mx-auto items-center py-6 px-4 md:px-16 max-w-[1920px]'>
@@ -34,9 +32,12 @@ export const Nav = () => {
             <Link to="/trilhas" onClick={handleCloseMenu}><li className='text-xl font-bold transition-all hover:text-sky-600'>Trilhas</li></Link>
             <Link to="/colabore" onClick={handleCloseMenu}><li className='text-xl font-bold transition-all hover:text-sky-600'>Colabore</li></Link>
             <Link to="/feedback" onClick={handleCloseMenu}><li className='text-xl font-bold transition-all hover:text-sky-600'>Feedback</li></Link>
-            <li><button onClick={toggleTheme} className='text-xl font-bold transition-all hover:text-sky-600'>Tema: {theme}</button></li>
+            <li>
+              <button onClick={toggleTheme} className='text-xl font-bold transition-all hover:text-sky-600 flex items-center'>
+                {theme === "light" ? <FaSun /> : <FaMoon />}
+              </button>
+            </li>
           </ul>
-
         </div>
 
         <div className='flex flex-col lg:flex-row gap-6'>
@@ -52,7 +53,6 @@ export const Nav = () => {
           </div>
         </div>
       </div>
-
     </nav>
-  )
-}
+  );
+};

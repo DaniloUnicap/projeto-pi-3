@@ -9,11 +9,11 @@ export const Inicio = () => {
 
     return (
         <div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:mt-24 px-4 md:px-16 ">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:mt-24 px-4 md:px-36 ">
                 <div className="flex flex-col">
                     <h1 className={`text-5xl italic text-center mt-8 md:mx-auto md:text-7xl ${theme === "light" ? "text-black" : "text-white"}`}><span className="font-bold  text-sky-600">Bird</span>Tech</h1>
 
-                    <p className="my-12 text-center px-8">
+                    <p className="my-12 text-justify px-8">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam debitis voluptas in blanditiis veritatis explicabo, dignissimos nostrum officia, dicta aspernatur perspiciatis maxime provident! Ipsa excepturi exercitationem provident labore ut officiis.
                     </p>
 
@@ -27,7 +27,7 @@ export const Inicio = () => {
                 </div>
             </div>
 
-            <div className="bg-[#f2f2f2] w-full p-6 mt-36 text-black">
+            <div className="bg-[#EBEBEF] w-full p-6 mt-36 text-black md:px-36">
                 <h2 className="text-xl font-semibold text-center">Setor de TI no Brasil deve crescer 12% em 2024, superando os Estados Unidos</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 md:mt-6">
                     <div className="my-8 md:my-0">

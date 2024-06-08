@@ -2,23 +2,10 @@ import React, { useState, useEffect, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ThemeContext } from "../context/ThemeContext";
 import "../App.css";
+import urls from '../data/urls';
+import { headersJson } from '../data/headers';
 
-const urls = {
-    "frontend": "https://parseapi.back4app.com/parse/classes/Frontend",
-    "backend": "https://parseapi.back4app.com/parse/classes/Backend",
-    "ferramentasageis": "https://parseapi.back4app.com/parse/classes/Ferramentas",
-    "redes": "https://parseapi.back4app.com/parse/classes/Redes",
-};
 
-const headers = {
-    "X-Parse-Application-Id": "Itmjd2v3Evbo1O46ZjJZGRvPNC22J7a3YnNhWzC3",
-    "X-Parse-REST-API-Key": "6SWgcaGd1K0jJQYnymlP30UfoL4f3aimb3gaO2GS",
-};
-
-const headersJson = {
-    ...headers,
-    "Content-Type": "application/json",
-};
 
 export const Cursos = () => {
     const { theme } = useContext(ThemeContext);
@@ -34,8 +21,8 @@ export const Cursos = () => {
                     headers: headersJson
                 });
                 const data = await response.json();
-                console.log("Dados retornados:", data); // Log dos dados recebidos
-                setCursos(data.results); // Ajuste conforme a estrutura dos dados retornados pela API
+                console.log("Dados retornados:", data);
+                setCursos(data.results);
                 setLoading(false);
             } catch (error) {
                 console.error('Erro:', error);
@@ -60,7 +47,7 @@ export const Cursos = () => {
             <div className='grid grid-cols-1 gap-y-8 lg:grid-cols-3'>
                 {cursos.map(item => (
                     <Link to={`/cursos/${categoria}/${item.tituloCurso}`} key={item.objectId}>
-                        <div className={`${theme === "light" ? "bg-gray-300 text-black" : "bg-[#242125] text-white"} w-[260px] mx-auto rounded-lg flex items-center py-2 px-4 transition-transform transform hover:scale-110 xl:w-[320px]`}>
+                        <div className={`${theme === "light" ? "bg-[#EBEBEF] text-black" : "bg-[#37373C] text-white"} w-[260px] mx-auto rounded-lg flex items-center py-2 px-4 transition-transform transform hover:scale-110 xl:w-[320px]`}>
                             <img src={item.iconeCurso} alt={item.tituloCurso} className='w-24' />
                             <h2 className='font-bold w-full text-center'>{item.tituloCurso}</h2>
                         </div>
