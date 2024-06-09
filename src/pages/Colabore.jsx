@@ -1,14 +1,18 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import PixQRCodeGenerator from '../components/PixQRCodeGenerator'
 import hero from '../assets/colabore/hero.png'
+import front from '../assets/colabore/front.png'
+import back from '../assets/colabore/back.png'
+import ferramentas from '../assets/colabore/ferramentas.png'
+import redes from '../assets/colabore/redes.png'
 
 export const Colabore = () => {
 
     const data = [
-        {id: 1, imagem: 'https://sujeitoprogramador.com/wp-content/uploads/2022/08/fullstack-blog.png'},
-        {id: 2, imagem: 'https://sujeitoprogramador.com/wp-content/uploads/2022/08/home.png'},
-        {id: 3, imagem: 'https://sujeitoprogramador.com/wp-content/uploads/2022/03/Frame-321.png'},
-        {id: 4, imagem: 'https://sujeitoprogramador.com/wp-content/uploads/2022/01/thumb-1.png'}
+        {id: 1, imagem: front},
+        {id: 2, imagem: back},
+        {id: 3, imagem: ferramentas},
+        {id: 4, imagem: redes}
     ]
 
     return (
@@ -38,18 +42,18 @@ export const Colabore = () => {
                 
 
             <section>
-                <h2 className="text-2xl font-semibold text-center my-16 ">Algum título aqui</h2>
+                <h2 className="text-2xl font-semibold text-center my-16 ">Ajude a manter a organização das trilhas e eventuais manutenções na plataforma</h2>
 
-                <div className=''>
+                <div className='lg:w-[600px] mx-auto'>
                     <Swiper
                         slidesPerView={1}
                         pagination={{clickable: true}}
                         navigation={{clickable: true}}
-                        autoplay={{ delay: 7000 }}
+                        autoplay={{ delay: 5000 }}
                     >
                         {data.map((item) => (
                             <SwiperSlide key={item.id}>
-                                <img src={item.imagem} alt="Slider" className='lg:h-[400px] lg:w-full' />
+                                <img src={item.imagem} alt="Slider" className='lg:h-[400px] mx-auto' />
                             </SwiperSlide>
                         ))}
                     </Swiper>
