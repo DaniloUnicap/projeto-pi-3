@@ -16,8 +16,8 @@ export const Aulas = () => {
     useEffect(() => {
         const fetchCursos = async () => {
             try {
-                console.log("Categoria:", categoria); // Log da categoria
-                console.log("Curso:", curso); // Log do curso
+                console.log("Categoria:", categoria);
+                console.log("Curso:", curso);
                 
                 const categoriaLowerCase = categoria.toLowerCase();
 
@@ -35,7 +35,7 @@ export const Aulas = () => {
                 }
 
                 const json = await res.json();
-                console.log("Resposta da API:", json); // Log da resposta da API
+                console.log("Resposta da API:", json);
 
                 const cursoEncontrado = json.results.find(c => c.tituloCurso === curso);
                 if (!cursoEncontrado) {
