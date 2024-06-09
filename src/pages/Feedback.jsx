@@ -117,7 +117,7 @@ export const Feedback = () => {
             </section>
 
             <section className='mt-28 font-bold text-lg'>
-                <h2 className='text-center mb-6'>Conte o que você acha do nosso sistema</h2>
+                <h2 className='text-center mb-6'>Conte o que você acha sobre a nossa plataforma</h2>
                 <div className='flex flex-col gap-6'>
                     <input
                         type="text"
